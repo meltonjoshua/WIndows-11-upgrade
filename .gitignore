@@ -1,0 +1,44 @@
+# Windows 11 Silent Upgrade - Git Ignore File
+
+# Temporary files
+*.tmp
+*.temp
+*~
+
+# Log files
+*.log
+*.logx
+
+# Downloaded installers and temporary files
+Windows11InstallationAssistant.exe
+PCHealthCheckSetup.msi
+Windows11Upgrade/
+Logs/
+
+# PowerShell specific
+*.ps1xml
+
+# Windows specific
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Test results
+TestResults/
+*.trx
+
+# User specific files
+*.user
+*.suo
+*.cache
+
+# Temporary folders
+temp/
+tmp/
+Downloads/
