@@ -194,11 +194,22 @@ function Show-ProgressIndicator
 5. Reboot coordination
 
 ## **Command Line Usage**
+
+### **One-Line Execution (Run Anywhere)**
+```powershell
+# Download and run immediately (requires elevated PowerShell)
+iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/meltonjoshua/WIndows-11-upgrade/main/Windows11-Silent-Upgrade.ps1'))
+
+# Alternative with parameters
+iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/meltonjoshua/WIndows-11-upgrade/main/Windows11-Silent-Upgrade.ps1')); Start-Windows11Upgrade -SkipChecks -NoReboot
+```
+
+### **Local Execution**
 ```powershell
 # Basic execution
 .\Windows11-Silent-Upgrade.ps1
 
-# With parameters (if supported)
+# With parameters
 .\Windows11-Silent-Upgrade.ps1 -SkipChecks -NoReboot -LogPath "C:\Temp\upgrade.log"
 ```
 

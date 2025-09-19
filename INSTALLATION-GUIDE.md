@@ -1,5 +1,29 @@
 # Windows 11 Silent Upgrade - Installation and Usage Guide
 
+## One-Line Installation (Recommended)
+
+### Copy and Paste - Run Anywhere
+Run this single command in an **elevated PowerShell** (Run as Administrator) to download and execute the Windows 11 upgrade script on any device:
+
+```powershell
+iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/meltonjoshua/WIndows-11-upgrade/main/Windows11-Silent-Upgrade.ps1'))
+```
+
+**Alternative one-liner with parameters:**
+```powershell
+# Skip compatibility checks and prevent auto-reboot
+iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/meltonjoshua/WIndows-11-upgrade/main/Windows11-Silent-Upgrade.ps1')); Start-Windows11Upgrade -SkipChecks -NoReboot
+```
+
+**For PowerShell 3.0+ (more secure):**
+```powershell
+Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/meltonjoshua/WIndows-11-upgrade/main/Windows11-Silent-Upgrade.ps1' -UseBasicParsing | Invoke-Expression
+```
+
+> **Note:** These commands will download and immediately execute the Windows 11 upgrade script. Ensure you trust the source and have appropriate backups before running.
+
+## Alternative Installation Methods
+
 ## Quick Start
 
 ### Method 1: Using the Batch File (Recommended for beginners)
